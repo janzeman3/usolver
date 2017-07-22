@@ -1,2 +1,6 @@
 # python ignore
 *.pyc
+
+# doxygen ignore
+doc/html/*
+doc/latex/*
