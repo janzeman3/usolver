@@ -1,4 +1,5 @@
-## Loads list of available solvers
+## \brief Loads list of available solvers
+#
 class CSolverListLoader:
 
   ## \brief List of available solvers
