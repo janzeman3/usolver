@@ -7,4 +7,6 @@ SolverList = SolverListLoader.SolverList
 del SolverListLoader
 
 print("Solver list loaded:")
-print(SolverList)
+print(SolverList.keys())
+
+print("\n")
