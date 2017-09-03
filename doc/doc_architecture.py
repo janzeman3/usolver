@@ -15,7 +15,8 @@
 #  @section archScheme Scheme/diagram
 #
 #  USolver has following class structures:
-#   - solver list loader
+#   1. Parse command lines arguments - see \ref common::ArgumentsParser::CArgumentsParser "CArgumentsParser"
+#   2. Load list of solvers - see \ref common::SolverListLoader::CSolverListLoader "CSolverListLoader"
 #   - input processing:
 #      - input structure loader
 #      - input loader
@@ -26,7 +27,11 @@
 #
 #  @section archInterfaces Interfaces
 #
-#  @subsection archSolverListStructure Solver list structure
+#  @subsection archInputVariablesStructure Input variables list
+#
+#   {VariableName: ValueAsString}
+#
+#  @subsection archSolverListStructure Solver list
 #
 #  Solver list is dictionary in form:
 #   {uniqueSolverName: pathToSolver}

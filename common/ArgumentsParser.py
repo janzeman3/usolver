@@ -1,6 +1,6 @@
 ## \brief Parses arguments from command line and encapsulates them
 class CArgumentsParser:
-  ## \brief Parses arguments from command line
+  ## \brief Parses arguments from command line and loads inifile
   def __init__(self):
     ## String containgn Solver ID, is used for search in \ref archSolverListStructure "SolverList"
     self.Solver = ""
@@ -9,6 +9,7 @@ class CArgumentsParser:
 
     self._ParseCommandLine()
 
+  ## \brief Parses arguments from command line and calls parsing of varibles and loading of ini-file
   def _ParseCommandLine(self):
     import argparse
 
@@ -23,6 +24,7 @@ class CArgumentsParser:
 
     self._ParseCommandLineVariables(ParsedArguments)
 
+  ## \brief Parses varibles from command line
   def _ParseCommandLineVariables(self, ParsedArguments):
     for arg in ParsedArguments.variables:
       splitArg = arg.split("=")
@@ -35,6 +37,9 @@ class CArgumentsParser:
         if key == "solver":
           self.Solver = value
 
+  ## \brief Loads inifile
+  #
+  # \todo implemnt this method
   def _ParseCommandIniFile(self, ParsedArguments):
     iniFileName = ParsedArguments.ini
     print("Warning: Parsing of ini-files is not supported yet.")
